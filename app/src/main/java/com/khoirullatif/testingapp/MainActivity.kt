@@ -13,6 +13,10 @@ import java.lang.StringBuilder
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
+    companion object {
+        private const val TAG = "MainActivity"
+    }
+
     private lateinit var btnSetValue: Button
     private lateinit var tvText: TextView
     private lateinit var imgPreview: ImageView
@@ -43,7 +47,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(p0: View?) {
         if (p0?.id == btnSetValue.id) {
-            Log.d("MainActivity", namesArray.toString()) // nulisnya bisa langsung pake logd (l kecil)
+            Log.d(TAG, namesArray.toString()) // nulisnya bisa langsung pake logd (l kecil)
             val name = StringBuilder()
             // Test 2. indexoutofboundException
             for (i in 0..2) {
